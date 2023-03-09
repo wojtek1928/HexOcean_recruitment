@@ -138,3 +138,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+
+# Custom user as auth user
+
+AUTH_USER_MODEL = 'images_archive.CustomUser'
