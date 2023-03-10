@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'HexOcean.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'HexOceanDB',
-        'USER': 'root',
-        'PASSWORD': 'admin123#',
-        'HOST': 'db',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3'
     }
 }
 

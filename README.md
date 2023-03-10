@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 ## HexOcean_recruitment
  API made using the Django Rest Framework that allows given users to add images and obtain links to these images. Task completed as part of recruitment to HexOcean.
  
-## Environment set up - without image
+## Environment set up - with docker image
+1. Put in one Docker image `HexOcean_web.tar`, `Dockerfile` and `docker-compose.yml`
+2. Enable the console at the file location and run the `docker load -i HexOcean_web.tar` command.
+3. After executing the command, execute the `docker-compose up` command.
+4. Access your web browser to `localhost:8000`. If everything went well you will see the API with DRF.
+
+## Environment set up - without docker image
 1. To set up the environment, you must have Docker installed.
 2. While in the project folder, enter `docker-compose up` in the console
 3. The next step is to check the project started successfully and enter the browser to the address `localhost:8000`
@@ -29,7 +36,7 @@ Then in the users tab you can create users and assign them appropriate tiers. Af
 # Expiring links
 Expiring links give you the opportunity to preview the image without logging in. The duration of the access ranges from 300 to 3000 seconds.
 
-# TIERS
+# TIERS - bulit-in
 - BASIC - users get:
     - link to a thumbnail that's 200px in height
 
@@ -48,18 +55,18 @@ Expiring links give you the opportunity to preview the image without logging in.
 Entering to virtual envoriment:
 cmd: .\.venv\Scripts\activate
 Docker:
-1. Listing avaible containers `docker ps`
-2. To enter containter `docker exec -it {id} bash`
-3. To rebuild container `docker-compose build {name}`
-4. Strting project's containers `docker-composer up`
-
+1. Strting project's containers `docker-compose up`
+2. Listing avaible containers `docker ps`
+3. To enter containter `docker exec -it {id} bash`
+ 
 
 ## ACCESS to administrator panel:
-# Admin user
+# Superuser - only this one has access to admin panel
 user: `root`
 password: `admin123#`
 
-# Basic user
+## Bulit-in users(lo)
+# Basic user - login only via django panel
 username/password: `user_b`
 password: `admin123#`
 
@@ -70,3 +77,7 @@ password: `admin123#`
 # Enterprise user
 username/password: `user_e`
 password: `admin123#`
+=======
+# HexOcean_recruitment
+ API made using the Django Rest Framework that allows given users to add images and obtain links to these images. Task completed as part of recruitment to HexOcean.
+>>>>>>> parent of 9df6059 (Docker images + README edit)
